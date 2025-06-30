@@ -1,205 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OPEN ARMS HOME PAGE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Arms</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class='container'>
-    <div class='titleBar'>
-      <img a src="https://scontent-lga3-2.cdninstagram.com/v/t51.288…pnApmfUOh5WXZdisY0pfJw&oe=6838392C&_nc_sid=7d3ac5"</img>
-      <h3>Open Arms</h3>
-      <button id='donateButton' onclick='openDonatePage()'>Donate Now!</button>
-    </div>
+  <header>
+    <h1>OPEN ARMS</h1>
+    <img a src="https://ik.imagekit.io/openarmsproj/Open_Arms_Image-removebg-preview.png?updatedAt=1750110506845" </img>
+    <nav>
+      <a href="#mission">Mission Statement</a>
+      <a href="#about">Info About Us</a>
+      <a href="#plan">What We Plan on Doing</a>
+    </nav>
+  </header>
 
-    <div class='mapRedirectButtons'>
-      <button id='lookingForFood' onclick='openMapPage()'>Find Open Locations</button>
-      <button id='lookingToDonate' onclick='openOperatingHours()'>Learn Where You Can Donate</button>
-    </div>
-    
-    <h4>About Us:</h4>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleDropdown('dbText1')">Mission Statement</button>
-      <div class="dropdown-content">
-        <p id="dbText1">The OpenArms Project aims to help underprivileged and under resourced students in all aspects of their academic career by making school supplies, academic and mental support, clothing, and books more accessible by involving students of all kinds in raising awareness and community events.</p>
-      </div>
-    </div>
-<br>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleDropdown('dbText2')">Info</button>
-      <div class="dropdown-content">
-        <p id="dbText2">We are a group of rising junior high school students. Having seen the impacts of socio-economic class on public schooling first hand, we feel a unique incentive to help others who do not have the resources we take for granted.</p>
-      </div>
-    </div>
-<br>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="toggleDropdown('dbText3')">What We Plan on Doing</button>
-      <div class="dropdown-content">
-        <p id="dbText3">Although we have a lot of planned, and even more things we'd like to achieve, our next step is to get the OpenArms Project started. First and foremost, this means researching, raising awareness, and hopefully getting started on one of our several plans for a clothing, book, and supply drive.</p>
-      </div>
-    </div>
+  <main>
+    <section id="mission" class="content">
+      <h2>Mission Statement</h2>
+      <p>
+        The Open Arms Project aims to help underprivileged and under-resourced
+        students in all aspects of their academic career by making school
+        supplies, academic and mental support, clothing, and books more accessible
+        by involving students of all kinds in raising awareness and community events.
+      </p>
+    </section>
 
-  </div>
+    <section id="about" class="content">
+      <h2>Info About Us</h2>
+      <p>
+        We are a group of rising junior high school students. Having seen the
+        impacts of socio-economic class on public schooling first-hand, we feel
+        a unique incentive to help others who do not have the resources we take
+        for granted.
+      </p>
+    </section>
 
+    <section id="plan" class="content">
+      <h2>What We Plan on Doing</h2>
+      <p>
+        Although we have a lot planned—and even more things we'd like to achieve—
+        our next step is to get the Open Arms Project started. First and foremost,
+        this means researching, raising awareness, and hopefully getting started
+        on one of our several plans for a clothing, book, and supply drive.
+      </p>
+    </section>
+
+    <section class="cta">
+      <p>Want to receive more information about the Open Arms project?</p>
+      <a href="https://forms.gle/8rNGMsQ6Bu3xqmJy5" class="btn">Click here!</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Open Arms Project</p>
+  </footer>
 <style>
-    body {
-      background-color: white;
-      text-align: center;
-      font-family: Tahoma, sans-serif;
-      color: #052c57;
-    }
-    .titleBar {
-      display: flex;
-      flex-direction: row;
-      gap: 300px;
-      align-items: center;
-      justify-content: center;
-      background-color: #F0F8FF;
-    }
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #333;
+}
 
-    h2 {
-      color: #063970;
-      font-size: 40px;
-      justify-content: center;
-    }
-    h3 {
-      color: #052c57;
-      font-size: 30px;
-    }
-    #donateButton {
-      font-size: 20px;
-      font-weight: bold;
-      letter-spacing: 0.05rem;
-      border: none;
-      padding: 10px;
-      background-color: #0E1822;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s ease-in;
-      border-radius: 10px;
-    }
-    #donateButton:hover {
-      border: 5px solid #e28743;
-      background-position: 40%;
-    }
-    .mapRedirectButtons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .mapRedirectButtons button {
-      padding: 10px 20px;
-      font-size: 15px;
-      font-weight: bold;
-      letter-spacing: 0.05rem;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s ease-in;
-      border-radius: 10px;
-    }
-    #lookingForFood {
-      background-color: #e28743;
-      color: white;
-    }
-    #lookingToDonate {
-      background-color: #1979a9;
-      color: white;
-    }
-    #lookingForFood:hover, #lookingToDonate:hover {
-      border: 5px solid #052c57;
-    }
-    .dropdown {
-      display: flex;
-      position: relative;
-      margin-top: px;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 200px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .dropdown-content p {
-      margin: 0;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-    .dropbtn {
-      padding: 10px;
-      font-size: 20px;
-      background-color: lightblue;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      width: 100%;
-      text-align: center;
-    }
-    .dropbtn:hover {
-      background-color: #f9f9f9;
-    }
-h4 {
-  color: #063970;
-  font-size: 40px;
-  justify-content: center;
-  display: flex;
+header {
+  background-color: #388a99ff;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: black;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+.content {
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.content h2 {
+  color: #004080;
+}
+
+.cta {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f8ff;
+  border-top: 1px solid #ddd;
+}
+
+.cta .btn {
+  background-color: #00509e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.cta .btn:hover {
+  background-color: #003f7f;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e6f0fa;
+  font-size: 0.9rem;
 }
   </style>
-
-    <script>
-    function openDonatePage() {
-      window.open('https://thapwebsite.netlify.app/donate', '_blank');
-    }
-    
-    function openMapPage() {
-      window.open('https://thapwebsite.netlify.app/map', '_blank');
-    }
-    
-    function openOperatingHours() {
-      window.open('https://thapwebsite.netlify.app/info', '_blank'); // Replace 'link' with actual link
-    }
-
-    function toggleDropdown(id) {
-      const dbText = document.getElementById(id);
-      const dropbtn = dbText.parentElement.querySelector('.dropbtn');
-
-      if (dbText.style.display === "none" || dbText.style.display === "") {
-        dbText.style.display = "block";
-        dropbtn.style.backgroundColor = "#ff0000";
-      } else {
-        dbText.style.display = "none";
-        dropbtn.style.backgroundColor = "green"; // Reset to original color
-      }
-    }
-
-    const button = document.getElementById('lookingForFood');
-    let clickCount = 0;
-
-    button.addEventListener('click', function() {
-        clickCount++;
-        fetch('/log-button-click', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-        },
-            body: JSON.stringify({ clickCount }),
-    })
-        .then(response => {
-        // Handle response from server if needed
-    })
-        .catch(error => {
-            console.error('Error logging button click:', error);
-    });
-});
-  </script>
 
 </body>
 </html>
