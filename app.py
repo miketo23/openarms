@@ -63,8 +63,8 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 @app.route('/map')
-def map():
-    return render_template('map.html')
+def contact():
+    return render_template('contact.html')
 
 @app.route('/info')
 def info():
